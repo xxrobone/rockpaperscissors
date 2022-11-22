@@ -27,35 +27,48 @@ function botChoice() {
 
 botChoice();
 
-player = prompt('Choose rock, paper or scissors').toLowerCase();
+player = prompt(
+  'play a round of rock, paper, scissors!' + '\nChoose rock, paper or scissors'
+);
+
+player.toLowerCase();
 
 if (player === 'rock' || player === 'scissors' || player === 'paper') {
   // result
   if (player === bot) {
     console.log(
-      'Player choice: ' + player + '\nBot choice: ' + bot + '\n\nIt´s a Draw!'
+      '%c Player choice: ' +
+        player +
+        '\nBot choice: ' +
+        bot +
+        '\n\nIt´s a Draw!',
+      'background: #222; color: #ffd500'
     );
     alert(
       'Player choice: ' + player + '\nBot choice: ' + bot + '\nIt´s a Draw!'
     );
   } else if (player === 'rock' && bot === 'scissors') {
     console.log(
-      'Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!'
+      '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!',
+      'background: #222; color: #bada55'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!');
   } else if (player === 'scissors' && bot === 'paper') {
     console.log(
-      'Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!'
+      '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!',
+      'background: #222; color: #bada55'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!');
   } else if (player === 'paper' && bot === 'rock') {
     console.log(
-      'Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!'
+      '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!',
+      'background: #222; color: #bada55'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!');
   } else {
     console.log(
-      'Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Loose!'
+      '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Loose!',
+      'background: #222; color: #D2042D'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Loose!');
   }
