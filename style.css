@@ -10,7 +10,11 @@ body {
     color: rgb(28, 172, 172);
     width: 100vw;
     height: 100vh;
-    padding: 2rem 0;
+}
+header {
+    margin-top: 2rem;
+    height: 100px;
+    width: 100%;
 }
 
 h1 {
@@ -91,7 +95,8 @@ input[type="radio"] {
  }
 
 .game {
-    margin: 0 auto 2rem;
+    position: relative;
+    margin: 0 auto;
     width: 500px;
     height: 400px;
     background: #000;
@@ -119,14 +124,14 @@ i.small {
 .bot_icon {
     position: absolute;
     transform: rotate(-90deg) scaleX(-1);
-    right: 40%;
+    right: 35%;
     color: orangered;
 }
 
 .player_icon {
     position: absolute;
     transform: rotate(90deg);
-    left: 40%;
+    left: 35%;
 }
 
 .players {
