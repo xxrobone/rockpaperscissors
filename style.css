@@ -10,6 +10,7 @@ body {
     color: rgb(28, 172, 172);
     width: 100vw;
     height: 100vh;
+    padding: 2rem 0;
 }
 
 h1 {
@@ -103,6 +104,14 @@ input[type="radio"] {
 i {
     font-size: calc(4vmin + 2vmax);
     color: aquamarine;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+i.small {
+    font-size: calc(3vmin + 1vmax);
+    filter: drop-shadow(1px 1px 1px aqua);
+    color: black;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
