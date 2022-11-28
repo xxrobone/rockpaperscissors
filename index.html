@@ -5,10 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d3412194f0.js" crossorigin="anonymous"></script>
     <title>Rock paper scissors</title>
 </head>
 
 <body>
+    <h1>Rock - Paper - Scissors</h1>
+    <div class="modal">
+        <div class="msg"></div>
+
+    </div>
+    <form>
+        <h2>Pick a choice</h2>
+        <div class="radio_wrapper">
+            <label for="rock" id="rock_label">
+                <input type="radio" id="rock" name="playerChoice" value="rock" title="rock" />
+                <i class="fa-solid fa-hand-fist"></i>
+            </label>
+            <label for="paper" id="paper_label">
+                <input type="radio" id="paper" name="playerChoice" value="paper" title="paper">
+                <i class="fa-solid fa-hand"></i>
+            </label>
+            <label for="scissors" id="scissors_label">
+                <input type="radio" id="scissors" name="playerChoice" value="scissors" title="scissors">
+                <i class="fa-solid fa-hand-peace"></i>
+            </label>
+        </div>
+        <button type="submit" class="submit_btn">Submit</button>
+    </form>
+    <div class="alert_box"></div>
+    <div class="players">
+        <h4>player: <span>0</span></h4>
+        <h4>bot: <span>0</span></h4>
+    </div>
+    <div class="game">
+        <!-- <div class="bot">
+            <i class="fa-solid fa-hand-fist"></i>
+            <i class="fa-solid fa-hand"></i>
+            <i class="fa-solid fa-hand-peace"></i>
+        </div>
+        <div class="player">
+            <i class="fa-solid fa-hand-fist"></i>
+            <i class="fa-solid fa-hand"></i>
+            <i class="fa-solid fa-hand-peace"></i>
+        </div> -->
+    </div>
+
 
     <script src="index.js"></script>
 </body>

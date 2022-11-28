@@ -1,9 +1,21 @@
 console.log('js connected');
 
+const body = document.body;
+
 // player vs bot & result
 
 let player;
 let bot;
+
+function createIcon(input, className) {
+  input = document.createElement('i');
+  input.classList.add('fa-solid', className);
+  return input;
+}
+
+const rock = createIcon('rock', 'fa-hand-fist');
+const paper = createIcon('paper', 'fa-hand');
+const scissors = createIcon('scissors', 'fa-hand-peace');
 
 let choicesArr = ['rock', 'paper', 'scissors'];
 
@@ -25,14 +37,49 @@ function botChoice() {
   }
 }
 
-botChoice();
-
 player = prompt(
   'play a round of rock, paper, scissors!' + '\nChoose rock, paper or scissors'
 );
+botChoice();
 
-player.toLowerCase();
+function playerUI(playerInput) {
+  let output;
+  if (playerInput === 'rock') {
+    output = rock;
+  } else if (playerInput === 'paper') {
+    output = paper;
+  } else {
+    output = scissors;
+  }
+  return output;
+}
 
+function botUI(botInput) {
+  let output;
+  if (botInput === 'rock') {
+    output = rock;
+  } else if (botInput === 'paper') {
+    output = paper;
+  } else {
+    output = scissors;
+  }
+  return output;
+}
+
+function gameUI(playerIcon, botIcon) {
+  let game = document.querySelector('.game');
+  game.classList.add('game');
+  body.appendChild(game);
+
+  // adding class to player and bot transform
+  playerIcon.classList.add('player_icon');
+  botIcon.classList.add('bot_icon');
+  game.append(playerIcon, botIcon);
+}
+gameUI(playerUI(player), botUI(bot));
+
+/* player.toLowerCase(); */
+/* 
 if (player === 'rock' || player === 'scissors' || player === 'paper') {
   // result
   if (player === bot) {
@@ -50,19 +97,19 @@ if (player === 'rock' || player === 'scissors' || player === 'paper') {
   } else if (player === 'rock' && bot === 'scissors') {
     console.log(
       '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!',
-      'background: #222; color: #bada55'
+      'background: #222; color: #90ee90'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!');
   } else if (player === 'scissors' && bot === 'paper') {
     console.log(
       '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!',
-      'background: #222; color: #bada55'
+      'background: #222; color: #90ee90'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!');
   } else if (player === 'paper' && bot === 'rock') {
     console.log(
       '%c Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!',
-      'background: #222; color: #bada55'
+      'background: #222; color: #90ee90'
     );
     alert('Player choice: ' + player + '\nBot choice: ' + bot + '\nYou Win!');
   } else {
@@ -76,3 +123,4 @@ if (player === 'rock' || player === 'scissors' || player === 'paper') {
   console.log('You must write, rock or paper or scissors!');
   alert('You must write, rock or paper or scissors!');
 }
+ */
