@@ -1,11 +1,17 @@
 console.log('js connected');
 
 const body = document.body;
+let result = document.querySelector('.alert_box');
+const btn = document.querySelector('.submit_btn');
 
+result.textContent = 'Will show the result';
 // player vs bot & result
 
 let player;
 let bot;
+
+let playerPoints = 0;
+let botPoints = 0;
 
 function createIcon(input, className) {
   input = document.createElement('i');
@@ -37,10 +43,21 @@ function botChoice() {
   }
 }
 
-player = prompt(
-  'play a round of rock, paper, scissors!' + '\nChoose rock, paper or scissors'
-);
-botChoice();
+function playerChoice() {
+  let choice = document.querySelector('input[name="radio"]:checked').value;
+  if (choice === 'rock') {
+    console.log('player choice rock');
+    player = 'rock';
+  } else if (choice === 'paper') {
+    console.log('player choice paper');
+    player = 'paper';
+  } else if (choice === 'scissors') {
+    console.log('player choice scissors');
+    player = 'scissors';
+  } else {
+    alert('you must choose');
+  }
+}
 
 function playerUI(playerInput) {
   let output;
@@ -78,7 +95,19 @@ function gameUI(playerIcon, botIcon) {
 }
 gameUI(playerUI(player), botUI(bot));
 
-/* player.toLowerCase(); */
+btn.addEventListener('click', () => {
+  playerChoice();
+  console.log('player variable is now: ' + player);
+});
+
+// game loop
+/* while (playerPoints <= 5 || botPoints <= 5) {
+  player = prompt(
+    'play a round of rock, paper, scissors!' +
+      '\nChoose rock, paper or scissors'
+  );
+  botChoice();
+} */
 /* 
 if (player === 'rock' || player === 'scissors' || player === 'paper') {
   // result

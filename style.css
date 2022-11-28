@@ -15,10 +15,16 @@ header {
     margin-top: 2rem;
     height: 100px;
     width: 100%;
+    padding: 0 1rem;
+}
+
+p {
+    font-family: Coolvetica;
+    text-align: center;
 }
 
 h1 {
-    font-size: calc(4vmin + 2vmax);
+    font-size: calc(2vmin + 2.5vmax);
     font-family: Coffee;
     text-align: center;
     text-transform: capitalize;
@@ -142,4 +148,11 @@ i.small {
     justify-content: space-evenly;
     text-transform: uppercase;
     font-family: Bebas;
+}
+
+.alert_box {
+    font-family: Bebas;
+    font-size: calc(1.5vmin + 2vmax);    
+    font-weight: 100;
+    text-align: center;
 }
